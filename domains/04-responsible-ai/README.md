@@ -2,6 +2,8 @@
 
 > **Peso en el examen:** 14 % (≈ 7 de las 50 preguntas que cuentan).
 > **Objetivo:** identificar los pilares de la IA responsable, saber qué herramienta de AWS aborda cada riesgo (sesgo, explicabilidad, drift, contenido dañino, supervisión humana) y comprender las garantías de privacidad de los servicios gestionados.
+>
+> 🆕 **Guía v1.1:** el objetivo 4.2.2 cita explícitamente **SageMaker Clarify** y **Amazon Bedrock Model Evaluations** como herramientas de explicabilidad/transparencia. Ver [novedades v1.1](../00-exam-guide-v1.1-changes.md#12-objetivos-ampliados).
 
 ## Mapeo a los task statements oficiales
 

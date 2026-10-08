@@ -1,15 +1,27 @@
 # AWS Certified AI Practitioner (AIF-C01) — Guía de Preparación en Español
 
 [![AWS Certified AI Practitioner](https://img.shields.io/badge/AWS%20Certified-AI%20Practitioner%20%28AIF--C01%29-FF9900?logo=amazonwebservices&logoColor=white)](https://aws.amazon.com/certification/certified-ai-practitioner/)
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.0.0-blue)](#roadmap)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.1.0-blue)](#roadmap)
 [![Docs lint](https://github.com/FRANK1808K/AWS-IA-PRACTITIONER-EN-ESPA-OL/actions/workflows/docs-lint.yml/badge.svg)](https://github.com/FRANK1808K/AWS-IA-PRACTITIONER-EN-ESPA-OL/actions/workflows/docs-lint.yml)
 [![Idioma](https://img.shields.io/badge/idioma-espa%C3%B1ol-c60b1e)](#índice)
 [![Actualizado](https://img.shields.io/badge/actualizado-2026--10-informational)](#roadmap)
+[![Guía examen](https://img.shields.io/badge/gu%C3%ADa%20AIF--C01-v1.1-orange)](domains/00-exam-guide-v1.1-changes.md)
 [![PRs bienvenidos](https://img.shields.io/badge/PRs-bienvenidos-brightgreen)](CONTRIBUTING.md)
 
 Documentación técnica, modular y en español para preparar el examen **AWS Certified AI Practitioner (AIF-C01)**, orientada a ingenieros cloud, desarrolladores y especialistas en datos. Combina teoría alineada con los dominios oficiales, criterios de selección de servicios, laboratorios prácticos con IAM de mínimo privilegio y estimación de costos, cheatsheets de decisión rápida y preguntas de práctica originales.
 
 > **Aviso:** proyecto comunitario no afiliado a Amazon Web Services. Los servicios de AWS evolucionan rápidamente: contrasta siempre con la [guía oficial del examen](https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01.html) y la documentación oficial. Las preguntas de práctica son originales y no proceden de exámenes reales.
+
+## ¿Por dónde empiezo?
+
+| Tu situación | Empieza aquí |
+|---|---|
+| 🔁 **Ya hice el examen y no aprobé** | [Plan de reintento de 4 semanas](guides/retake-plan.md) (diagnóstico por dominios, calendario y criterios para volver a reservar) |
+| 🆕 **Estudié con material anterior a mayo de 2026** | [Novedades de la guía v1.1](domains/00-exam-guide-v1.1-changes.md): IA agéntica, MCP, AgentCore, Kiro, Strands, tokens, grounding |
+| 📚 **Empiezo desde cero** | [Guía de estudio de 6 semanas](#guía-de-estudio-recomendada) |
+| 🔎 **Busco cursos, videos, libros y simulacros** | [Centro de recursos](resources/README.md) (ruta mínima "sí o sí" con 10 recursos) |
+| 🧪 **Quiero medir mi nivel** | [Simulacro 01 — 65 preguntas](practice-questions/mock-exam-01.md) |
+| ⏰ **Me examino en pocos días** | [Repaso final 48 h](cheatsheets/final-review-48h.md) + [playbook del examen](guides/exam-playbook.md) |
 
 ---
 
@@ -17,6 +29,7 @@ Documentación técnica, modular y en español para preparar el examen **AWS Cer
 
 - [El examen en una tabla](#el-examen-en-una-tabla)
 - [Dominios](#dominios)
+- [Material de estudio](#material-de-estudio)
 - [Estructura de directorios](#estructura-de-directorios)
 - [Guía de estudio recomendada](#guía-de-estudio-recomendada)
 - [Roadmap](#roadmap)
@@ -37,6 +50,9 @@ Documentación técnica, modular y en español para preparar el examen **AWS Cer
 | **Duración** | 90 minutos |
 | **Puntaje mínimo** | 700 / 1000 |
 | **Costo** | USD 100 |
+| **Idiomas** | Incluye **español (Latinoamérica)** y **español (España)**. Si lo haces en inglés, pide **ESL +30 min** antes de reservar ([cómo](guides/exam-playbook.md#12-cómo-pedir-esl-30-solo-si-haces-el-examen-en-inglés)) |
+| **Versión de la guía** | **v1.1** (30-abr-2026): ver [novedades](domains/00-exam-guide-v1.1-changes.md) |
+| **Reintento** | Tras un suspenso, hay que esperar **14 días** |
 | **Vigencia** | 3 años |
 
 ---
@@ -45,11 +61,24 @@ Documentación técnica, modular y en español para preparar el examen **AWS Cer
 
 | # | Dominio | Peso | Documento | Temas clave |
 |---|---|---|---|---|
+| 🆕 | Novedades de la guía v1.1 | — | [`domains/00-exam-guide-v1.1-changes.md`](domains/00-exam-guide-v1.1-changes.md) | IA agéntica, MCP, context engineering, tokens, AgentCore, Kiro, Strands, AWS Transform, Amazon Quick |
 | 1 | Fundamentos de IA y ML | **20 %** | [`domains/01-fundamentals-ai-ml`](domains/01-fundamentals-ai-ml/README.md) | AI/ML/DL/GenAI, tipos de aprendizaje, ciclo de vida de ML, métricas |
 | 2 | Fundamentos de IA Generativa | **24 %** | [`domains/02-fundamentals-generative-ai`](domains/02-fundamentals-generative-ai/README.md) | FMs y LLMs, tokens, temperatura/Top-P/Top-K, RAG vs. fine-tuning, alucinaciones |
 | 3 | Aplicaciones de Modelos Fundacionales | **28 %** | [`domains/03-applications-foundation-models`](domains/03-applications-foundation-models/README.md) | Bedrock (KB, Agents, Guardrails), JumpStart, servicios de IA, Amazon Q |
 | 4 | Directrices de IA Responsable | **14 %** | [`domains/04-responsible-ai`](domains/04-responsible-ai/README.md) | Equidad, explicabilidad, Clarify, Model Cards, Model Monitor, privacidad |
 | 5 | Seguridad, Cumplimiento y Gobernanza | **14 %** | [`domains/05-security-compliance-governance`](domains/05-security-compliance-governance/README.md) | Responsabilidad compartida, IAM, PrivateLink, CloudTrail/CloudWatch, costos |
+
+## Material de estudio
+
+| Tipo | Contenido |
+|---|---|
+| 📘 Teoría | [5 dominios](domains/) + [novedades v1.1](domains/00-exam-guide-v1.1-changes.md) |
+| 🧪 Exámenes | [Simulacro 01 (65 preguntas)](practice-questions/mock-exam-01.md) · [30 preguntas por dominio](practice-questions/README.md) |
+| 🃏 Flashcards | [109 tarjetas importables en Anki/Quizlet](flashcards/README.md) |
+| 📋 Cheatsheets | [Matriz de decisión (40 escenarios)](cheatsheets/exam-decision-matrix.md) · [Repaso final 48 h](cheatsheets/final-review-48h.md) · [Glosario ES–EN](cheatsheets/glossary.md) |
+| 🧭 Guías | [Plan de reintento](guides/retake-plan.md) · [Playbook del examen](guides/exam-playbook.md) |
+| 🔬 Práctica | [Lab 01 — RAG con Bedrock](labs/lab-01-rag-bedrock-knowledge-bases/README.md) · [workshops y retos](resources/hands-on.md) |
+| 🔗 Recursos externos | [Oficiales de AWS](resources/official-aws.md) · [Videos y cursos](resources/videos-and-courses.md) · [Exámenes de práctica](resources/practice-exams.md) · [Libros, flashcards y comunidad](resources/books-flashcards-community.md) |
 
 ```mermaid
 pie showData
@@ -74,6 +103,7 @@ pie showData
 │   ├── scripts/check_links.py                  # Validación de enlaces relativos y anclas
 │   └── workflows/docs-lint.yml                 # CI: markdownlint + enlaces + JSON + sintaxis Python
 ├── domains/                                    # Teoría por dominio oficial del examen
+│   ├── 00-exam-guide-v1.1-changes.md           # 🆕 Novedades de la guía v1.1 (abr-2026)
 │   ├── 01-fundamentals-ai-ml/README.md         # D1 (20 %)
 │   ├── 02-fundamentals-generative-ai/README.md # D2 (24 %)
 │   ├── 03-applications-foundation-models/README.md  # D3 (28 %)
@@ -90,9 +120,22 @@ pie showData
 ├── cheatsheets/                                # Repaso rápido
 │   ├── README.md
 │   ├── exam-decision-matrix.md                 # 40 escenarios requisito + restricción → servicio
+│   ├── final-review-48h.md                     # Lo imprescindible para las últimas 48 h
 │   └── glossary.md                             # Glosario español–inglés
-└── practice-questions/                         # Banco de preguntas originales por dominio
+├── guides/                                     # Estrategia
+│   ├── retake-plan.md                          # Plan de reintento de 4 semanas por dominios
+│   └── exam-playbook.md                        # Inscripción (idioma, ESL +30), tiempo y técnica de respuesta
+├── resources/                                  # Recursos externos curados
+│   ├── README.md                               # Ruta mínima "sí o sí" (10 recursos)
+│   ├── official-aws.md                         # Guías, Skill Builder, documentación, whitepapers
+│   ├── videos-and-courses.md                   # Cursos y videos en español e inglés
+│   ├── practice-exams.md                       # Simulacros oficiales y de terceros + método
+│   ├── books-flashcards-community.md           # Libros, flashcards, GitHub, blogs, comunidades
+│   └── hands-on.md                             # Workshops, PartyRock y mini-retos de consola
+├── flashcards/                                 # 109 tarjetas CSV para Anki/Quizlet
+└── practice-questions/                         # Banco de preguntas originales
     ├── README.md                               # Formato del examen y plantilla de preguntas
+    ├── mock-exam-01.md                         # Simulacro completo de 65 preguntas (v1.1)
     └── domain-0{1..5}-questions.md
 ```
 
@@ -128,9 +171,10 @@ Plan de **6 semanas** con una dedicación de **6–8 horas por semana**. Los pes
 | Versión | Estado | Alcance |
 |---|---|---|
 | **v1.0** | ✅ Publicado | 5 dominios completos · Plantilla de laboratorio · Lab 01 (RAG) · Matriz de decisión (40 escenarios) · Glosario · 30 preguntas de práctica · CI de documentación |
-| **v1.1** | 🔜 Planificado | Lab 02 (Guardrails) · Lab 03 (Bedrock Agents) · +50 preguntas (incluidos casos de estudio) |
-| **v1.2** | 🗓️ Planificado | Lab 04 (Clarify) · Lab 05 (PrivateLink + auditoría) · Versión IaC (CDK/Terraform) del Lab 01 |
-| **v2.0** | 💡 Propuesta | Simulacro completo de 65 preguntas cronometrado · Flashcards exportables (Anki) · Licencia de contenido definida |
+| **v1.1** | ✅ Publicado | Novedades de la guía v1.1 · Centro de recursos (oficiales, videos, simulacros, libros, labs) · Simulacro 01 (65 preguntas) · 109 flashcards · Plan de reintento · Playbook del examen · Repaso 48 h |
+| **v1.2** | 🔜 Planificado | Simulacro 02 · Lab 02 (Guardrails) · Lab 03 (Bedrock Agents / AgentCore) · Preguntas de casos de estudio |
+| **v1.3** | 🗓️ Planificado | Lab 04 (Clarify) · Lab 05 (PrivateLink + auditoría) · Versión IaC (CDK/Terraform) del Lab 01 |
+| **v2.0** | 💡 Propuesta | Simulacro interactivo cronometrado · Licencia de contenido definida |
 
 ¿Quieres proponer algo? Abre un *issue* con la etiqueta `enhancement`.
 
@@ -155,6 +199,8 @@ Las contribuciones son bienvenidas. Resumen de reglas (detalle completo en [`CON
 ---
 
 ## Recursos oficiales
+
+> Catálogo completo y clasificado en el [Centro de recursos](resources/README.md).
 
 - [Página de la certificación AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/)
 - [Guía oficial del examen AIF-C01](https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01.html)

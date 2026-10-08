@@ -2,6 +2,8 @@
 
 > **Peso en el examen:** 28 % — **el dominio más importante** (≈ 14 de las 50 preguntas que cuentan).
 > **Objetivo:** saber diseñar soluciones con Amazon Bedrock (modelos, Knowledge Bases, Agents, Guardrails), decidir entre Bedrock y SageMaker JumpStart, y elegir el servicio de IA aplicada correcto para cada caso de uso.
+>
+> 🆕 **Guía v1.1:** objetivos nuevos **3.2.5 versionado de prompts (Prompt Management)** y **3.4.5 métricas de negocio**; *distillation* y *LLM-as-a-judge* añadidos; servicios nuevos **AgentCore, Strands Agents, Kiro, AWS Transform** y Amazon Quick. Ver [novedades v1.1](../00-exam-guide-v1.1-changes.md#55-servicios-y-herramientas-agénticas-de-aws).
 
 ## Mapeo a los task statements oficiales
 
@@ -288,7 +290,7 @@ Servicios **pre-entrenados**, consumibles por API, que **no requieren experienci
 | **Amazon Q Business** | Empleados de la empresa | Asistente GenAI sobre **datos corporativos** mediante conectores (S3, SharePoint, Confluence, Salesforce…), **respeta los permisos (ACL) de la fuente**, se integra con IAM Identity Center, admite guardrails administrativos y **Q Apps** (mini-apps sin código). |
 | **Amazon Q in QuickSight** | Analistas y usuarios de negocio | **BI conversacional**: preguntas en lenguaje natural sobre los datos, construcción de visuales y dashboards, resúmenes ejecutivos y *data stories*. |
 
-> AWS ha ido integrando estas capacidades en **Amazon Quick Suite** (que incluye QuickSight). El examen puede seguir utilizando las denominaciones "Amazon Q in QuickSight" o "QuickSight Q".
+> QuickSight evolucionó a **Amazon Quick** (antes *Amazon Quick Suite*): Quick Sight (BI), Quick Research, Quick Flows, Quick Automate y Quick Index. La guía v1.1 ya menciona **Amazon Quick**; el material antiguo puede usar "Amazon Q in QuickSight" o "QuickSight Q". Ver [novedades v1.1](../00-exam-guide-v1.1-changes.md#55-servicios-y-herramientas-agénticas-de-aws).
 
 ### 3.4 Otros servicios que aparecen en el examen
 

@@ -2,6 +2,8 @@
 
 > **Peso en el examen:** 24 % (≈ 12 de las 50 preguntas que cuentan).
 > **Objetivo:** entender cómo funcionan los Foundation Models, cómo se controla su salida en inferencia, qué técnica de adaptación elegir según costo/datos/complejidad y cuáles son sus limitaciones.
+>
+> 🆕 **Guía v1.1:** objetivos nuevos **2.1.4 precios por token**, **2.1.5 context engineering** y **2.1.6 IA agéntica y MCP**. Ver [novedades v1.1](../00-exam-guide-v1.1-changes.md#3-precios-basados-en-tokens-214).
 
 ## Mapeo a los task statements oficiales
 

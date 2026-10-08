@@ -2,6 +2,8 @@
 
 > **Peso en el examen:** 20 % del puntaje con puntuación (≈ 10 de las 50 preguntas que cuentan).
 > **Objetivo:** dominar el vocabulario base, saber reconocer qué tipo de problema de ML plantea un escenario y elegir la métrica de evaluación correcta.
+>
+> 🆕 **Guía v1.1:** este dominio añade la **IA agéntica** a los términos básicos (1.1.1/1.1.2) y el objetivo **1.2.6 — ML tradicional vs. foundation models**. Ver [novedades v1.1](../00-exam-guide-v1.1-changes.md#2-ml-tradicional-vs-foundation-models-126).
 
 ## Mapeo a los task statements oficiales
 
