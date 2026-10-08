@@ -1,4 +1,4 @@
-# IA para Abogados — Entender la Inteligencia Artificial desde el Derecho
+# IA para Abogados para Entender la Inteligencia Artificial desde el Derecho
 
 [![Público](https://img.shields.io/badge/p%C3%BAblico-abogados%20y%20juristas-6b3fa0)](abogados/README.md)
 [![Base](https://img.shields.io/badge/basado%20en-AWS%20AI%20Practitioner%20%28AIF--C01%29-FF9900?logo=amazonwebservices&logoColor=white)](https://aws.amazon.com/certification/certified-ai-practitioner/)
