@@ -27,9 +27,9 @@ Si solo vas a usar 10 recursos, que sean estos, en este orden:
 | 4 | ⭐ [AWS Skill Builder — Exam Prep Plan AIF-C01](https://skillbuilder.aws/learning-plan/3NRN71QZR2/exam-prep-plan-aws-certified-ai-practitioner-aifc01--english/FBV4STG94B) | Curso 🏛️ | 🆓 (plan estándar) | Plan oficial de AWS con curso de preparación y preguntas de estilo examen. |
 | 5 | ⭐ [Official Practice Question Set AIF-C01](https://skillbuilder.aws/learn/4URFGY63KV/official-practice-question-set-aws-certified-ai-practitioner--aifc01--english/FVG43Y1PAX) | Examen 🏛️ | 🆓 | 20 preguntas oficiales: la mejor referencia de estilo y dificultad. |
 | 6 | Curso en video (elige uno): [Stéphane Maarek (Udemy)](https://www.udemy.com/course/aws-ai-practitioner-certified/) 💲 o [freeCodeCamp / Andrew Brown](https://www.freecodecamp.org/news/prepare-to-pass-the-aws-certified-ai-practitioner-certification/) 🆓 | Video | 💲 / 🆓 | Explicación guiada de todos los servicios. Maarek tiene subtítulos en español. |
-| 7 | ⭐ [Simulacro 01 de este repo (65 preguntas)](../practice-questions/mock-exam-01.md) | Examen | 🆓 | Simulacro completo alineado con la v1.1. |
+| 7 | ⭐ [Simulador interactivo](../simulator/README.md) con los [Simulacros 01](../practice-questions/mock-exam-01.md) y [02](../practice-questions/mock-exam-02.md) | Examen | 🆓 | 130 preguntas alineadas con la v1.1, con cronómetro e informe por dominio. |
 | 8 | Exámenes de práctica: [Tutorials Dojo](https://portal.tutorialsdojo.com/product/aws-certified-ai-practitioner-aif-c01-practice-exams/) o [Maarek practice exams](https://www.udemy.com/course/practice-exams-aws-certified-ai-practitioner/) | Examen 👥 | 💲 | Banco amplio para detectar puntos débiles. |
-| 9 | ⭐ [Matriz de decisión](../cheatsheets/exam-decision-matrix.md) + [repaso final 48 h](../cheatsheets/final-review-48h.md) | Cheatsheet | 🆓 | Repaso intensivo de los últimos días. |
+| 9 | ⭐ [Pares que se confunden](../cheatsheets/confusable-pairs.md) + [matriz de decisión](../cheatsheets/exam-decision-matrix.md) + [repaso final 48 h](../cheatsheets/final-review-48h.md) | Cheatsheet | 🆓 | Repaso intensivo de los últimos días. |
 | 10 | ⭐ [Playbook del día del examen](../guides/exam-playbook.md) | Guía | 🆓 | Inscripción (examen en español o ESL +30 min), estrategia de tiempo y técnica de descarte. |
 
 ## Catálogo completo

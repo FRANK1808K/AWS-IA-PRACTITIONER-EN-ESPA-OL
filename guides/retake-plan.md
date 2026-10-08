@@ -61,7 +61,7 @@ Marca lo que recuerdes que te costó en el examen. **No anotes preguntas del exa
 | Dom 11 | **Práctica:** mini-retos de consola o [Lab 01](../labs/lab-01-rag-bedrock-knowledge-bases/README.md) | [Práctica](../resources/hands-on.md) | [ ] |
 | Lun 12 | D3 §2: **Bedrock vs. JumpStart** + D3 §3: servicios de IA (tabla "cuándo NO usarlo") | D3 | [ ] |
 | Mar 13 | D3 §4–5: prompts, Prompt Management, **evaluación** (LLM-as-a-judge, métricas de negocio) | D3 + v1.1 §6–7 | [ ] |
-| Mié 14 | ✍️ [Preguntas D3](../practice-questions/domain-03-questions.md) + escenarios 1–9 y 21–29 de la [matriz](../cheatsheets/exam-decision-matrix.md) + flashcards D3 | Repo | [ ] |
+| Mié 14 | ✍️ [Preguntas D3](../practice-questions/domain-03-questions.md) + escenarios 1–9 y 21–29 de la [matriz](../cheatsheets/exam-decision-matrix.md) + [pares que se confunden §1](../cheatsheets/confusable-pairs.md#1-dominio-3--servicios-de-ia-y-fms-28-) + flashcards D3 | Repo | [ ] |
 
 ### Semana 2 (15–21 oct) — D1 y D5
 
@@ -70,19 +70,19 @@ Marca lo que recuerdes que te costó en el examen. **No anotes preguntas del exa
 | Jue 15 | D1 §1–3: jerarquía AI/ML/DL/GenAI/**agéntica**, tipos de aprendizaje, **ML tradicional vs. FMs** | [D1](../domains/01-fundamentals-ai-ml/README.md) + v1.1 §2 | [ ] |
 | Vie 16 | D1 §5: **ciclo de vida de ML** y servicios de SageMaker por fase | D1 | [ ] |
 | Sáb 17 | D1 §6: **métricas** (haz tú mismo la tabla FP/FN → métrica) | D1 | [ ] |
-| Dom 18 | ✍️ [Preguntas D1](../practice-questions/domain-01-questions.md) + flashcards D1 | Repo | [ ] |
+| Dom 18 | ✍️ [Preguntas D1](../practice-questions/domain-01-questions.md) + [pares §2](../cheatsheets/confusable-pairs.md#2-dominio-1--fundamentos-de-ml-20-) + flashcards D1 | Repo | [ ] |
 | Lun 19 | D5 §1–3: **responsabilidad compartida**, Scoping Matrix, IAM, **PrivateLink** | [D5](../domains/05-security-compliance-governance/README.md) | [ ] |
 | Mar 20 | D5 §4–6: **CloudTrail vs. invocation logging**, CloudWatch, **costos**, gobernanza + v1.1 §8 (alucinaciones) | D5 + v1.1 | [ ] |
-| Mié 21 | ✍️ [Preguntas D5](../practice-questions/domain-05-questions.md) + escenarios 10–16 y 30–35 de la matriz | Repo | [ ] |
+| Mié 21 | ✍️ [Preguntas D5](../practice-questions/domain-05-questions.md) + escenarios 10–16 y 30–35 de la matriz + [pares §4](../cheatsheets/confusable-pairs.md#4-dominio-5--seguridad-cumplimiento-y-gobernanza-14-) | Repo | [ ] |
 
 ### Semana 3 (22–28 oct) — D4 y primeros simulacros
 
 | Día | Tarea | Material | Hecho |
 |---|---|---|---|
 | Jue 22 | D4 completo: pilares, **Clarify, Model Cards, Model Monitor, A2I**, privacidad | [D4](../domains/04-responsible-ai/README.md) | [ ] |
-| Vie 23 | ✍️ [Preguntas D4](../practice-questions/domain-04-questions.md) + escenarios 17–20 y 32–33 | Repo | [ ] |
+| Vie 23 | ✍️ [Preguntas D4](../practice-questions/domain-04-questions.md) + escenarios 17–20 y 32–33 + [pares §3](../cheatsheets/confusable-pairs.md#3-dominio-4--ia-responsable-14-) | Repo | [ ] |
 | Sáb 24 | 🧪 **Official Practice Question Set** (20 preguntas, Skill Builder) | [Oficial](../resources/practice-exams.md) | [ ] |
-| Dom 25 | 🧪 **[Simulacro 01](../practice-questions/mock-exam-01.md)** cronometrado (90 min) | Repo | [ ] |
+| Dom 25 | 🧪 **[Simulacro 01](../practice-questions/mock-exam-01.md)** cronometrado en el [simulador](../simulator/README.md) (90 min) | Repo | [ ] |
 | Lun 26 | Revisar **todos** los errores del simulacro y anotarlos en tu registro | [Método](../resources/practice-exams.md#2-método-para-sacar-el-máximo-partido) | [ ] |
 | Mar 27 | Repasar los dominios donde fallaste | Repo | [ ] |
 | Mié 28 | 🧪 Simulacro de terceros n.º 1 (Tutorials Dojo o Maarek) → **¿cumples los criterios? Reserva** | [Exámenes](../resources/practice-exams.md) | [ ] |
@@ -93,7 +93,7 @@ Marca lo que recuerdes que te costó en el examen. **No anotes preguntas del exa
 |---|---|---|
 | Jue 29 | Revisión de errores del simulacro n.º 1 | [ ] |
 | Vie 30 | 🧪 Simulacro de terceros n.º 2 | [ ] |
-| Sáb 31 | Revisión de errores + flashcards de todos los dominios | [ ] |
+| Sáb 31 | 🧪 **[Simulacro 02](../practice-questions/mock-exam-02.md)** en el [simulador](../simulator/README.md) + revisión de errores | [ ] |
 | Dom 1 | 🧪 Simulacro de terceros n.º 3 (o el Official Pretest si tienes suscripción) | [ ] |
 | Lun 2 | Revisión final de errores | [ ] |
 | Mar 3 – Mié 4 | [Repaso final 48 h](../cheatsheets/final-review-48h.md) + [matriz de decisión](../cheatsheets/exam-decision-matrix.md) completa | [ ] |
@@ -101,14 +101,20 @@ Marca lo que recuerdes que te costó en el examen. **No anotes preguntas del exa
 
 ---
 
+### Hábito diario (15–20 min, todos los días del plan)
+
+1. **Flashcards** del dominio de la semana en Anki ([mazo](../flashcards/README.md)).
+2. **Modo "Refuerzo D1 · D3 · D4 · D5"** del [simulador](../simulator/README.md) con corrección inmediata: 10 preguntas.
+3. Anota cada fallo en tu registro de errores con el **par confundido** (p. ej., "Clarify vs. Model Monitor").
+
 ## 3. Criterios para reservar el examen
 
 Reserva solo cuando cumplas **todos**:
 
-- [ ] ≥ **85 %** en el [Simulacro 01](../practice-questions/mock-exam-01.md) (primer intento).
+- [ ] ≥ **85 %** en el [Simulacro 01](../practice-questions/mock-exam-01.md) y ≥ **80 %** en el [Simulacro 02](../practice-questions/mock-exam-02.md) (primer intento).
 - [ ] ≥ **80 %** en al menos **dos** simulacros de terceros distintos (primer intento).
 - [ ] Ningún dominio por debajo del 70 % en los simulacros.
-- [ ] Respondes los 40 escenarios de la [matriz de decisión](../cheatsheets/exam-decision-matrix.md) sin mirar.
+- [ ] Respondes los 40 escenarios de la [matriz de decisión](../cheatsheets/exam-decision-matrix.md) sin mirar y explicas todos los [pares que se confunden](../cheatsheets/confusable-pairs.md).
 - [ ] Puedes explicar con tus palabras: RAG vs. fine-tuning, Bedrock vs. JumpStart, CloudTrail vs. invocation logging, precisión vs. recall, Clarify vs. Model Monitor, Bedrock Agents vs. AgentCore.
 
 Si a 28-oct no los cumples, añade una semana más centrada en tus errores en lugar de reservar con prisa.

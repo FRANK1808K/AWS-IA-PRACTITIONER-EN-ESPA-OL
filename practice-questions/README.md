@@ -5,11 +5,14 @@ Preguntas **originales** de estilo AIF-C01, organizadas por dominio. No son preg
 | Archivo | Dominio | Preguntas |
 |---|---|---|
 | ⭐ [`mock-exam-01.md`](mock-exam-01.md) | **Simulacro completo** (todos los dominios, incluye temas v1.1 🆕) | 65 |
+| ⭐ [`mock-exam-02.md`](mock-exam-02.md) | **Simulacro de escenario**, más difícil (todos los dominios, incluye v1.1 🆕) | 65 |
 | [`domain-01-questions.md`](domain-01-questions.md) | D1 — Fundamentos de IA y ML (20 %) | 6 |
 | [`domain-02-questions.md`](domain-02-questions.md) | D2 — Fundamentos de IA Generativa (24 %) | 6 |
 | [`domain-03-questions.md`](domain-03-questions.md) | D3 — Aplicaciones de FMs (28 %) | 6 |
 | [`domain-04-questions.md`](domain-04-questions.md) | D4 — IA Responsable (14 %) | 6 |
 | [`domain-05-questions.md`](domain-05-questions.md) | D5 — Seguridad, Cumplimiento y Gobernanza (14 %) | 6 |
+
+> 💻 Haz los simulacros en el [simulador interactivo](../simulator/README.md): cronómetro, marcadores e informe por dominio.
 
 ## Formato del examen real
 

@@ -33,4 +33,9 @@ jobs:
             | xargs -0 -n1 python -m json.tool > /dev/null
 
       - name: Sintaxis de los scripts Python
-        run: python -m py_compile labs/*/scripts/*.py .github/scripts/*.py
+        run: python -m py_compile labs/*/scripts/*.py .github/scripts/*.py simulator/build.py
+
+      - name: Simulador sincronizado con los simulacros
+        run: |
+          python simulator/build.py
+          git diff --exit-code simulator/index.html
