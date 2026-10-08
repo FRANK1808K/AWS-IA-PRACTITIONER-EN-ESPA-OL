@@ -12,7 +12,9 @@ Preguntas **originales** de estilo AIF-C01, organizadas por dominio. No son preg
 | [`domain-04-questions.md`](domain-04-questions.md) | D4 — IA Responsable (14 %) | 6 |
 | [`domain-05-questions.md`](domain-05-questions.md) | D5 — Seguridad, Cumplimiento y Gobernanza (14 %) | 6 |
 
-> 💻 Haz los simulacros en el [simulador interactivo](../simulator/README.md): cronómetro, marcadores e informe por dominio.
+> 💻 Haz los simulacros en el [simulador interactivo](../simulator/README.md): interfaz en blanco como la del examen, cronómetro, marcadores, botón «Ver en inglés» e informe por dominio.
+>
+> 🇬🇧 **Versiones en inglés:** [Mock Exam 01](en/mock-exam-01.md) · [Mock Exam 02](en/mock-exam-02.md), con la terminología del examen original y la misma numeración.
 
 ## Formato del examen real
 

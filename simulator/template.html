@@ -1,61 +1,47 @@
 <title>Simulador AIF-C01</title>
-<meta name="description" content="Simulador cronometrado del examen AWS Certified AI Practitioner (AIF-C01) en español, con informe por dominio.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<meta name="description" content="Simulador cronometrado del examen AWS Certified AI Practitioner (AIF-C01) en español, con versión en inglés de cada pregunta e informe por dominio.">
 <style>
-/* Layout: cabina de examen. Barra superior fija (cronómetro + progreso), pregunta en una columna de lectura, navegador lateral que pasa abajo en móvil. */
+/* Layout: interfaz de examen en blanco, como la del examen real. Barra superior con cronómetro, pregunta en una columna de lectura y navegador lateral que pasa abajo en móvil. Tema único claro a propósito. */
 :root {
-  --bg: #eef1f3;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --ink: #18242c;
-  --muted: #5b6b75;
-  --line: #d5dde2;
-  --accent: #0e6b68;
-  --accent-soft: #d8ecea;
-  --flag: #b86e00;
-  --flag-soft: #fbecd2;
-  --good: #23784a;
-  --good-soft: #dcefe3;
-  --bad: #b23a30;
-  --bad-soft: #f7dfdc;
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --radius: 10px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #11181d; --surface: #182229; --ink: #e4ebef; --muted: #98a8b2; --line: #2b3a44;
-    --accent: #4fb8b2; --accent-soft: #173a3a; --flag: #e5a23c; --flag-soft: #3a2c14;
-    --good: #5cc48a; --good-soft: #163525; --bad: #ef7d72; --bad-soft: #3d1d1a;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #11181d; --surface: #182229; --ink: #e4ebef; --muted: #98a8b2; --line: #2b3a44;
-  --accent: #4fb8b2; --accent-soft: #173a3a; --flag: #e5a23c; --flag-soft: #3a2c14;
-  --good: #5cc48a; --good-soft: #163525; --bad: #ef7d72; --bad-soft: #3d1d1a;
-  color-scheme: dark;
+  --ink: #1a1a1a;
+  --muted: #5f6368;
+  --line: #d0d4d9;
+  --accent: #1f5fa6;
+  --accent-soft: #e8f0fa;
+  --flag: #a85f00;
+  --flag-soft: #fdf1df;
+  --good: #1e7a45;
+  --good-soft: #e3f3e9;
+  --bad: #b3261e;
+  --bad-soft: #fbe9e7;
+  --en: #4a5560;
+  --en-soft: #f5f7f9;
+  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-display: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius: 6px;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1rem; line-height: 1.55; }
 .wrap { max-width: 68rem; margin: 0 auto; padding-inline: 16px; padding-block: 1.5rem 3rem; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.01em; }
-h2 { font-size: 1.3rem; font-weight: 700; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 700; }
 h3 { font-size: 1.05rem; font-weight: 700; }
 p { margin: 0; }
-.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 .muted { color: var(--muted); }
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
-code { font-family: var(--font-mono); font-size: 0.9em; background: var(--accent-soft); padding: 0 0.25em; border-radius: 4px; }
+code { font-family: var(--font-mono); font-size: 0.9em; background: var(--en-soft); border: 1px solid var(--line); padding: 0 0.25em; border-radius: 3px; }
 button, select { font: inherit; }
-.btn { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 0.55rem 1rem; cursor: pointer; font-weight: 600; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 4px; padding: 0.5rem 1rem; cursor: pointer; font-weight: 700; }
 .btn:hover { border-color: var(--accent); }
-.btn:focus-visible, .opt:focus-within, .nav-cell:focus-visible, .mode:focus-within { outline: 3px solid var(--accent); outline-offset: 2px; }
-.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
-.btn-primary:hover { filter: brightness(1.08); }
+.btn:focus-visible, .opt:focus-within, .nav-cell:focus-visible, .mode:focus-within, .en-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+.btn-primary:hover { filter: brightness(1.1); }
 .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
 .row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 
@@ -134,6 +120,15 @@ td.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .rcard.is-right { border-left-color: var(--good); }
 .rmeta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
 .note { font-size: 0.85rem; color: var(--muted); max-width: 65ch; }
+.en-toggle { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--accent); border-radius: 4px; padding: 0.3rem 0.7rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.en-toggle[aria-expanded="true"] { background: var(--accent-soft); border-color: var(--accent); }
+.en-panel { border: 1px dashed var(--line); background: var(--en-soft); border-radius: var(--radius); padding: 0.85rem 1rem; display: grid; gap: 0.5rem; color: var(--en); }
+.en-panel .qtext { font-size: 1rem; color: var(--ink); }
+.en-panel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+.en-panel li { font-size: 0.95rem; }
+.en-panel .letter { font-family: var(--font-mono); font-weight: 700; color: var(--muted); }
+details.en-details summary { cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.9rem; }
+details.en-details[open] summary { margin-bottom: 0.5rem; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -177,6 +172,13 @@ const MODES = [
     pick: () => shuffle(allQuestions().filter(q => q.new)) },
 ];
 
+function englishBlock(q) {
+  return `<div class="en-panel" lang="en">
+    <span class="eyebrow">English version</span>
+    <p class="qtext">${q.en.text}</p>
+    <ul>${q.en.options.map(o => `<li><span class="letter">${o.id}.</span> ${o.text}</li>`).join("")}</ul>
+  </div>`;
+}
 function fmtTime(s) {
   const m = Math.floor(s / 60), r = s % 60;
   return `${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
@@ -199,7 +201,7 @@ function renderStart() {
     <div class="intro">
       <span class="eyebrow">AWS Certified AI Practitioner · AIF-C01</span>
       <h1>Simulador de examen</h1>
-      <p class="muted">Practica en condiciones reales: cronómetro, preguntas marcadas para revisar e informe final por dominio con el mismo formato «Cumple / Necesita mejora» que envía AWS. Preguntas originales de este repositorio, alineadas con la guía v1.1.</p>
+      <p class="muted">Practica en condiciones reales: interfaz en blanco como la del examen, cronómetro, preguntas marcadas para revisar e informe final por dominio con el mismo formato «Cumple / Necesita mejora» que envía AWS. Cada pregunta tiene un botón «Ver en inglés» para ver cómo aparecería en la versión inglesa del examen.</p>
       <div class="facts"><span><b>65</b> preguntas</span><span><b>90</b> min (<b>120</b> con ESL +30)</span><span>aprobado <b>700</b>/1000</span><span>objetivo en simulacros <b>≥ 80 %</b></span></div>
     </div>
     ${saved ? `<div class="confirm" style="margin-top:1.5rem"><span>Tienes un intento sin terminar de <strong>${saved.modeName}</strong> (${saved.answeredCount} respondidas).</span><div class="row"><button class="btn btn-primary" id="resume">Continuar intento</button><button class="btn" id="discard">Descartar</button></div></div>` : ""}
@@ -244,7 +246,7 @@ function renderStart() {
     const mode = document.querySelector('input[name="mode"]:checked').value;
     const time = document.getElementById("time").value;
     const instant = document.getElementById("instant").checked;
-    store.set("-prefs", { mode, time, instant });
+    store.set("-prefs", { ...store.get("-prefs", {}), mode, time, instant });
     startExam(mode, time, instant);
   };
   if (saved) {
@@ -265,7 +267,7 @@ function startExam(modeId, time, instant) {
   const questions = mode.pick();
   const baseMin = mode.min || Math.round(questions.length * 1.4);
   const limit = time === "none" ? null : Math.round(baseMin * (time === "esl" ? 4 / 3 : 1) * 60);
-  state = { modeId, modeName: mode.name, questions, answers: {}, flags: {}, idx: 0, limit, used: 0, instant, checked: {}, answeredCount: 0 };
+  state = { modeId, modeName: mode.name, questions, answers: {}, flags: {}, idx: 0, limit, used: 0, instant, checked: {}, answeredCount: 0, showEn: !!store.get("-prefs", {}).showEn };
   renderExam();
 }
 function persist() { state.answeredCount = Object.keys(state.answers).filter(k => state.answers[k].length).length; store.set("-current", state); }
@@ -290,7 +292,10 @@ function renderExam() {
       <article class="qcard">
         <div class="qhead">
           <span class="eyebrow">Pregunta ${state.idx + 1} de ${total}</span>
-          ${multi ? `<span class="hint">Elige ${q.answer.length === 2 ? "DOS" : q.answer.length} respuestas</span>` : ""}
+          <div class="row" style="gap:0.5rem">
+            ${multi ? `<span class="hint">Elige ${q.answer.length === 2 ? "DOS" : q.answer.length} respuestas</span>` : ""}
+            <button class="en-toggle" id="en-toggle" aria-expanded="${!!state.showEn}" aria-controls="en-zone">${state.showEn ? "Ocultar inglés" : "Ver en inglés"}</button>
+          </div>
         </div>
         <p class="qtext">${q.text}</p>
         <div class="opts" role="${multi ? "group" : "radiogroup"}">
@@ -303,6 +308,7 @@ function renderExam() {
               <span><span class="letter">${o.id}.</span> ${o.text}</span></label>`;
           }).join("")}
         </div>
+        <div id="en-zone">${state.showEn ? englishBlock(q) : ""}</div>
         ${state.instant && !checked ? `<div><button class="btn" id="check" ${picked.length ? "" : "disabled"}>Comprobar respuesta</button></div>` : ""}
         ${checked ? `<div class="feedback ${isCorrect(q, picked) ? "ok" : "ko"}"><strong>${isCorrect(q, picked) ? "Correcta." : "Incorrecta. Respuesta: " + q.answer.join(", ") + "."}</strong> ${q.why} <span class="rmeta">(${DOMAINS[q.domain]})</span></div>` : ""}
         <div class="qfoot">
@@ -334,6 +340,11 @@ function renderExam() {
   const go = i => { state.idx = i; persist(); renderExam(); window.scrollTo(0, 0); };
   document.getElementById("prev").onclick = () => go(state.idx - 1);
   const next = document.getElementById("next"); if (next) next.onclick = () => go(state.idx + 1);
+  document.getElementById("en-toggle").onclick = () => {
+    state.showEn = !state.showEn;
+    const prefs = store.get("-prefs", {}); prefs.showEn = state.showEn; store.set("-prefs", prefs);
+    persist(); renderExam();
+  };
   document.getElementById("flag").onclick = () => { state.flags[q.id] = !state.flags[q.id]; persist(); renderExam(); };
   const check = document.getElementById("check"); if (check) check.onclick = () => { state.checked[q.id] = true; persist(); renderExam(); };
   app.querySelectorAll(".nav-cell").forEach(b => b.onclick = () => go(Number(b.dataset.i)));
@@ -425,7 +436,8 @@ function renderReport(res, p) {
         <p>${q.text}</p>
         <p><strong>Tu respuesta:</strong> ${mine} · <strong>Correcta:</strong> ${q.answer.join(", ")}</p>
         <div style="display:grid;gap:0.2rem;font-size:0.92rem">${q.options.filter(o => q.answer.includes(o.id)).map(o => `<span><span class="mono">${o.id}.</span> ${o.text}</span>`).join("")}</div>
-        <p class="muted">${q.why}</p></article>`;
+        <p class="muted">${q.why}</p>
+        <details class="en-details"><summary>Ver en inglés</summary>${englishBlock(q)}</details></article>`;
     }).join("") : `<p class="muted">Ninguna fallada. Excelente.</p>`;
   };
   drawReview(true);

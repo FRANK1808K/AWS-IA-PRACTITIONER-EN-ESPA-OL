@@ -1,8 +1,9 @@
 """Genera simulator/index.html a partir de los simulacros en Markdown.
 
 Uso: python simulator/build.py
-Lee practice-questions/mock-exam-*.md, extrae preguntas, opciones y clave de
-respuestas, y las inserta en simulator/template.html.
+Lee practice-questions/mock-exam-*.md (español, con la clave de respuestas) y
+practice-questions/en/mock-exam-*.md (versión en inglés de preguntas y opciones),
+valida que coincidan y los inserta en simulator/template.html.
 """
 
 import html
@@ -12,9 +13,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+QUESTIONS_DIR = ROOT / "practice-questions"
 EXAMS = [
-    ("sim01", "Simulacro 01", ROOT / "practice-questions" / "mock-exam-01.md"),
-    ("sim02", "Simulacro 02", ROOT / "practice-questions" / "mock-exam-02.md"),
+    ("sim01", "Simulacro 01", "mock-exam-01.md"),
+    ("sim02", "Simulacro 02", "mock-exam-02.md"),
 ]
 QUESTION_RE = re.compile(r"^\*\*(\d+)\.\*\*\s+(.*)$")
 OPTION_RE = re.compile(r"^- ([A-E])\. (.*)$")
@@ -29,15 +31,22 @@ def inline(text: str) -> str:
     return re.sub(r"`(.+?)`", r"<code>\1</code>", text)
 
 
-def parse(exam_id: str, path: Path) -> list:
-    questions, keys, current = {}, {}, None
+def parse_questions(path: Path) -> dict:
+    """Devuelve {número: {"text", "options"}} sin leer la clave de respuestas."""
+    questions, current = {}, None
     for line in path.read_text(encoding="utf-8").splitlines():
         if m := QUESTION_RE.match(line):
             current = int(m.group(1))
             questions[current] = {"text": inline(m.group(2)), "options": []}
         elif (m := OPTION_RE.match(line)) and current is not None:
             questions[current]["options"].append({"id": m.group(1), "text": inline(m.group(2))})
-        elif m := KEY_RE.match(line):
+    return questions
+
+
+def parse(exam_id: str, path: Path, en_path: Path) -> list:
+    questions, english, keys = parse_questions(path), parse_questions(en_path), {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if m := KEY_RE.match(line):
             keys[int(m.group(1))] = {
                 "answer": m.group(2).split(", "),
                 "domain": m.group(3),
@@ -51,15 +60,22 @@ def parse(exam_id: str, path: Path) -> list:
         q = {**questions[n], **keys[n], "id": f"{exam_id}-{n}", "n": n}
         if not set(q["answer"]) <= {o["id"] for o in q["options"]}:
             sys.exit(f"{path.name} Q{n}: la respuesta no está entre las opciones")
+        en = english.get(n)
+        if not en or [o["id"] for o in en["options"]] != [o["id"] for o in q["options"]]:
+            sys.exit(f"en/{path.name} Q{n}: falta la pregunta o sus opciones no coinciden con el español")
+        q["en"] = en
         out.append(q)
+    if sorted(english) != sorted(questions):
+        sys.exit(f"en/{path.name}: el número de preguntas no coincide con el español")
     return out
 
 
 def main() -> int:
     data = {
         "exams": [
-            {"id": exam_id, "name": name, "questions": parse(exam_id, path)}
-            for exam_id, name, path in EXAMS
+            {"id": exam_id, "name": name,
+             "questions": parse(exam_id, QUESTIONS_DIR / filename, QUESTIONS_DIR / "en" / filename)}
+            for exam_id, name, filename in EXAMS
         ]
     }
     template = (ROOT / "simulator" / "template.html").read_text(encoding="utf-8")

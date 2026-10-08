@@ -74,7 +74,7 @@ Documentación técnica, modular y en español para preparar el examen **AWS Cer
 | Tipo | Contenido |
 |---|---|
 | 📘 Teoría | [5 dominios](domains/) + [novedades v1.1](domains/00-exam-guide-v1.1-changes.md) |
-| 🧪 Exámenes | [Simulador interactivo](simulator/README.md) · [Simulacro 01](practice-questions/mock-exam-01.md) · [Simulacro 02](practice-questions/mock-exam-02.md) (65 + 65) · [30 preguntas por dominio](practice-questions/README.md) |
+| 🧪 Exámenes | [Simulador interactivo (con «Ver en inglés»)](simulator/README.md) · [Simulacro 01](practice-questions/mock-exam-01.md) · [Simulacro 02](practice-questions/mock-exam-02.md) (65 + 65) · [30 preguntas por dominio](practice-questions/README.md) |
 | 🃏 Flashcards | [109 tarjetas importables en Anki/Quizlet](flashcards/README.md) |
 | 📋 Cheatsheets | [Pares que se confunden](cheatsheets/confusable-pairs.md) · [Matriz de decisión (40 escenarios)](cheatsheets/exam-decision-matrix.md) · [Repaso final 48 h](cheatsheets/final-review-48h.md) · [Glosario ES–EN](cheatsheets/glossary.md) |
 | 🧭 Guías | [Plan de reintento](guides/retake-plan.md) · [Playbook del examen](guides/exam-playbook.md) |
@@ -135,11 +135,12 @@ pie showData
 │   ├── books-flashcards-community.md           # Libros, flashcards, GitHub, blogs, comunidades
 │   └── hands-on.md                             # Workshops, PartyRock y mini-retos de consola
 ├── flashcards/                                 # 109 tarjetas CSV para Anki/Quizlet
-├── simulator/                                  # Simulador HTML con cronómetro e informe por dominio (build.py lo genera)
+├── simulator/                                  # Simulador HTML en blanco con cronómetro, «Ver en inglés» e informe por dominio
 └── practice-questions/                         # Banco de preguntas originales
     ├── README.md                               # Formato del examen y plantilla de preguntas
     ├── mock-exam-01.md                         # Simulacro completo de 65 preguntas (v1.1)
     ├── mock-exam-02.md                         # Simulacro de escenario de 65 preguntas, más difícil
+    ├── en/mock-exam-0{1,2}.md                  # Versiones en inglés de los simulacros
     └── domain-0{1..5}-questions.md
 ```
 
